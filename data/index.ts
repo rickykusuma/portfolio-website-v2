@@ -2,6 +2,7 @@ export const navItems = [
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
   { name: "Experience", link: "#experience" },
+  { name: "Contact", link: "#contact" },
 ];
 
 export const gridItems = [
@@ -205,13 +206,12 @@ export const socialMedia = [
   {
     id: 1,
     img: "/git.svg",
+    url: "https://github.com/rickykusuma",
   },
+
   {
     id: 2,
-    img: "/twit.svg",
-  },
-  {
-    id: 3,
     img: "/link.svg",
+    url: "https://www.linkedin.com/in/ricky-andrianto/",
   },
 ];
