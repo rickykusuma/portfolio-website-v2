@@ -3,6 +3,8 @@ import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import MagicButton from "./ui/MagicButton";
 import { FaLocationArrow } from "react-icons/fa6";
+import { GrDocumentUser } from "react-icons/gr";
+import { socialMedia } from "@/data";
 
 const Hero = () => {
   return (
@@ -33,13 +35,29 @@ const Hero = () => {
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
             Hi, I&apos;m Ricky, a React.js Developer based in Indonesia
           </p>
-          <a href="#projects">
-            <MagicButton
-              title="Show my work"
-              icon={<FaLocationArrow />}
-              position="right"
-            />
-          </a>
+          <div className="flex md:flex-row flex-col justify-center items-center gap-5 md:gap-10">
+            <div>
+              <a
+                target="_blank"
+                href="https://drive.google.com/file/d/1KcvwoFzhcOrovrJa6qD_JMBT8zS5MmDH/view?usp=sharing"
+              >
+                <MagicButton
+                  title="My resume"
+                  icon={<GrDocumentUser />}
+                  position="right"
+                />
+              </a>
+            </div>
+            <div>
+              <a href="#projects">
+                <MagicButton
+                  title="Show my work"
+                  icon={<FaLocationArrow />}
+                  position="right"
+                />
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
