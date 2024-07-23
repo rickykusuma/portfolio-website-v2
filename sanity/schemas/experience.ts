@@ -51,7 +51,12 @@ export default {
       name: "endDate",
       title: "End Date",
       type: "date",
-      validation: (rule: Rule) => rule.required(),
+      validation: (Rule: Rule) =>
+        Rule.custom((field, context) =>
+          context?.document?.present && field === undefined
+            ? true
+            : "This field must not be empty."
+        ),
       hidden: ({ document }: { document: any }) => document?.present,
     },
     {
