@@ -57,6 +57,18 @@ export default {
       of: [{ type: "reference", to: { type: "techStack" } }],
       validation: (rule: Rule) => rule.required(),
     },
+    {
+      name: "githubLink",
+      title: "Github Link",
+      type: "url",
+      validation: (rule: Rule) => rule.optional(),
+    },
+    {
+      name: "productionLink",
+      title: "Live Website Link",
+      type: "url",
+      validation: (rule: Rule) => rule.optional(),
+    },
   ],
   preview: {
     select: {

@@ -37,8 +37,8 @@ export default {
     },
 
     {
-      title: "fromDate",
-      name: "From",
+      name: "startDate",
+      title: "Start Date",
       type: "date",
       validation: (rule: Rule) => rule.required(),
     },
@@ -48,8 +48,8 @@ export default {
       type: "boolean",
     },
     {
-      title: "toDate",
-      name: "To",
+      name: "endDate",
+      title: "End Date",
       type: "date",
       validation: (rule: Rule) => rule.required(),
       hidden: ({ document }: { document: any }) => document?.present,
@@ -67,25 +67,25 @@ export default {
       media: "companyLogo",
       title: "positionName",
       stillwork: "present",
-      fromDate: "fromDate",
-      toDate: "toDate",
+      startDate: "startDate",
+      endDate: "endDate",
     },
     prepare({
       media,
       title,
       stillwork,
-      fromDate,
-      toDate,
+      startDate,
+      endDate,
     }: {
       media: any;
       title: string;
       stillwork: boolean;
-      fromDate: Date;
-      toDate: Date;
+      startDate: Date;
+      endDate: Date;
     }) {
       return {
         title: title,
-        subtitle: `${fromDate} - ${stillwork ? "present" : toDate}`,
+        subtitle: `${startDate} - ${stillwork ? "present" : endDate}`,
         media: media,
       };
     },
