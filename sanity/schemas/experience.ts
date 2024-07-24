@@ -88,7 +88,9 @@ export default {
         Rule.custom((field, context) =>
           context?.document?.present && field === undefined
             ? true
-            : "This field must not be empty."
+            : field === undefined
+              ? "This field must not be empty."
+              : true
         ),
       hidden: ({ document }: { document: any }) => document?.present,
     },

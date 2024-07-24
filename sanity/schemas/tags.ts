@@ -13,6 +13,12 @@ export default {
       validation: (rule: Rule) => rule.required(),
     },
     {
+      name: "hexRibbon",
+      title: "Hex Color Ribbon",
+      type: "string",
+      validation: (rule: Rule) => rule.required(),
+    },
+    {
       name: "companyName",
       title: "Company Name",
       type: "reference",
