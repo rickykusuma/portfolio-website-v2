@@ -35,7 +35,40 @@ export default {
         },
       ],
     },
-
+    {
+      name: "workType",
+      title: "Type of Work",
+      type: "string",
+      options: {
+        list: [
+          { title: "Remote", value: "Remote" },
+          { title: "On-site", value: "On-site" },
+          { title: "Hybrid", value: "Hybrid" },
+        ],
+      },
+      validation: (rule: Rule) => rule.required(),
+    },
+    {
+      name: "jobType",
+      title: "Job Type",
+      type: "string",
+      options: {
+        list: [
+          { title: "Contract", value: "Contract" },
+          { title: "Full-time", value: "Full-time" },
+          { title: "Part-time", value: "Part-time" },
+          { title: "Freelance", value: "Freelance" },
+          { title: "Internship", value: "Internship" },
+        ],
+      },
+      validation: (rule: Rule) => rule.required(),
+    },
+    {
+      name: "region",
+      title: "Region",
+      type: "string",
+      validation: (rule: Rule) => rule.required(),
+    },
     {
       name: "startDate",
       title: "Start Date",
