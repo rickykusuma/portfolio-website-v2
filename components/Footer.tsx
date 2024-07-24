@@ -7,14 +7,14 @@ const Footer = () => {
   return (
     <footer className="w-full mb-[100px] md:pb-10 md:mb-5 " id="contact">
       <div className="flex flex-col items-center">
-        <h1 className="heading lg:max-w-[45vw] my-5">
+        <h1 className="heading lg:max-w-[45vw]">
           I seize every <span className="text-purple">chance</span> that comes
           my way in my professional career.
         </h1>
-        {/* <p className="text-white-200 md:mt-10 my-5 text-center">
+        <p className="text-white-200 md:mt-10 my-5 text-center">
           Reach out to me today and let&apos;s discuss how I can help you
           achieve your goals
-        </p> */}
+        </p>
         <div>
           <a href="mailto:ricky.ad58@gmail.com">
             <MagicButton
