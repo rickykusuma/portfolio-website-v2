@@ -38,7 +38,7 @@ const Hero = () => {
             <div>
               <a
                 target="_blank"
-                href="https://drive.google.com/file/d/1KcvwoFzhcOrovrJa6qD_JMBT8zS5MmDH/view?usp=sharing"
+                href="https://drive.google.com/file/d/1kwJf5I0ZestN7y7cZYtf0a7sI5rM2x2J/view?usp=sharing"
               >
                 <MagicButton
                   title="My resume"
