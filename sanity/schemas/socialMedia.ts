@@ -7,6 +7,12 @@ export default {
   type: "document",
   fields: [
     {
+      name: "socMedName",
+      title: "Social Media Name",
+      type: "string",
+      validation: (rule: Rule) => rule.required(),
+    },
+    {
       name: "socialMediaUrl",
       title: "Social Media URL",
       type: "url",
@@ -19,4 +25,10 @@ export default {
       validation: (rule: Rule) => rule.required(),
     },
   ],
+  preview: {
+    select: {
+      title: "socMedName",
+      media: "svg",
+    },
+  },
 };

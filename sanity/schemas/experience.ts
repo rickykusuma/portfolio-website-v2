@@ -1,3 +1,7 @@
+// import {
+//   orderRankField,
+//   orderRankOrdering,
+// } from "@sanity/orderable-document-list";
 import { Rule } from "sanity";
 
 /* eslint-disable import/no-anonymous-default-export */
@@ -88,7 +92,9 @@ export default {
         Rule.custom((field, context) =>
           context?.document?.present && field === undefined
             ? true
-            : "This field must not be empty."
+            : field === undefined
+              ? "This field must not be empty."
+              : true
         ),
       hidden: ({ document }: { document: any }) => document?.present,
     },
