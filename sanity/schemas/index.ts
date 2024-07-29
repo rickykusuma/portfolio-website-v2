@@ -1,15 +1,7 @@
 import experience from "./experience";
+import profile from "./profile";
 import projects from "./projects";
-import resume from "./resume";
-import socialMedia from "./socialMedia";
 import tags from "./tags";
 import techStack from "./techStack";
 
-export const schemaTypes = [
-  experience,
-  projects,
-  tags,
-  techStack,
-  socialMedia,
-  resume,
-];
+export const schemaTypes = [profile, experience, projects, techStack, tags];
