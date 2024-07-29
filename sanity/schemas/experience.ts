@@ -1,10 +1,5 @@
-// import {
-//   orderRankField,
-//   orderRankOrdering,
-// } from "@sanity/orderable-document-list";
 import { Rule } from "sanity";
 
-/* eslint-disable import/no-anonymous-default-export */
 export default {
   name: "workExperience",
   title: "Work Experience",
@@ -31,8 +26,8 @@ export default {
     {
       name: "description",
       title: "Description",
-      type: "array",
       validation: (rule: Rule) => rule.optional(),
+      type: "array",
       of: [
         {
           type: "block",
@@ -108,29 +103,18 @@ export default {
   ],
   preview: {
     select: {
-      media: "companyLogo",
+      companyLogo: "companyLogo",
       title: "positionName",
-      stillwork: "present",
+      stillWork: "present",
       startDate: "startDate",
       endDate: "endDate",
     },
-    prepare({
-      media,
-      title,
-      stillwork,
-      startDate,
-      endDate,
-    }: {
-      media: any;
-      title: string;
-      stillwork: boolean;
-      startDate: Date;
-      endDate: Date;
-    }) {
+    prepare(selection: Record<string, any>) {
+      const { companyLogo, title, stillWork, startDate, endDate } = selection;
       return {
         title: title,
-        subtitle: `${startDate} - ${stillwork ? "present" : endDate}`,
-        media: media,
+        subtitle: `${startDate} - ${stillWork ? "present" : endDate}`,
+        media: companyLogo,
       };
     },
   },
