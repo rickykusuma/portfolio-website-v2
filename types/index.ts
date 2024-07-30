@@ -4,6 +4,12 @@ export type techStackType = {
   name: string;
   image: string;
 };
+export type socialMediaType = {
+  _id: string;
+  socMedName?: string;
+  socialMediaUrl: string;
+  svg: string;
+};
 export type projectType = {
   _id: string;
   _createdAt: Date;
@@ -35,4 +41,19 @@ export type workExperienceType = {
   present: boolean;
   endDate: Date;
   techStacks?: techStackType[];
+};
+
+export type profileType = {
+  _id: string;
+  _createdAt: string;
+  fullName: string;
+  nickname: string;
+  headline?: string;
+  email: string;
+  profileImage?: string;
+  shortBio?: string;
+  fullBio?: PortableTextBlock[];
+  socialMedia: socialMediaType[];
+  resumeURL: string;
+  workAt?: string;
 };
