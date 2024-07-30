@@ -51,7 +51,7 @@ const RecentProjects = () => {
               return (
                 <div
                   key={_id}
-                  className="sm:h-[41rem] h-[32rem] lg:min-h-[32.5rem] flex items-center justify-center sm:w-[570px] w-[80vw] "
+                  className="sm:h-[33rem] h-[28rem] lg:min-h-[32.5rem] flex items-center justify-center sm:w-[570px] w-[80vw] "
                 >
                   <ModalTrigger
                     onSelected={
@@ -67,14 +67,14 @@ const RecentProjects = () => {
                       disabled={productionLink == null && githubLink == null}
                       title={productionLink || githubLink}
                     >
-                      <div className="relative flex items-center rounded-3xl justify-center sm:w-[570px] w-[80vw] overflow-hidden sm:h-[40vh] h-[30vh] mb-10">
+                      <div className="relative flex items-center rounded-3xl justify-center sm:w-[570px] w-[80vw] overflow-hidden  mb-10">
                         <div className="relative w-full h-full rounded-3xl overflow-hidden lg:rounded-3xl bg-[#13162d]">
                           <img src="/bg.png" alt="bg-img" />
                         </div>
                         <img
                           src={thumbnail}
                           alt={name}
-                          className="z-10 absolute object-contain rotate-[8deg] h-full scale-110"
+                          className="object-contain z-10 absolute object-center scale-90 rounded-3xl"
                         />
                       </div>
                       <div className="flex flex-col justify-between items-start gap-3 md:flex-row md:items-center">
@@ -91,7 +91,7 @@ const RecentProjects = () => {
                         </Button>
                       </div>
 
-                      <div className="flex flex-col md:flex-row justify-between gap-2 md:gap-0 mt-7 mb-3">
+                      <div className="flex flex-col md:flex-row justify-between gap-5 md:gap-0 mt-7 mb-3">
                         <div className="flex flex-wrap items-start">
                           {techStacks.map((techStack: techStackType, index) => (
                             <div
