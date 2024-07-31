@@ -1,10 +1,9 @@
 "use client";
 import { cn } from "@/utils/cn";
 import { BackgroundGradientAnimation } from "./BackgroundGradientAnimation";
-import { Globe } from "./Globe";
 import { GridGlobe } from "./GridGlobe";
 import Lottie from "react-lottie";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import animationData from "@/data/confetti.json";
 import MagicButton from "./MagicButton";
 import { IoCopyOutline } from "react-icons/io5";
@@ -37,7 +36,9 @@ export const BentoGridItem = ({
   imgClassName,
   titleClassName,
   spareImg,
+  email,
 }: {
+  email?: string;
   className?: string;
   title?: string | React.ReactNode;
   description?: string | React.ReactNode;
@@ -49,8 +50,10 @@ export const BentoGridItem = ({
 }) => {
   const [copied, setCopied] = useState(false);
 
-  const handleCopy = () => {
-    navigator.clipboard.writeText("ricky.ad58@gmail.com");
+  const handleCopy = (description?: string | React.ReactNode) => {
+    if (typeof description === "string") {
+      navigator.clipboard.writeText(description);
+    }
     setCopied(true);
   };
   useEffect(() => {
@@ -165,7 +168,9 @@ export const BentoGridItem = ({
                 icon={<IoCopyOutline />}
                 otherClasses="!bg-[#161a31]"
                 position="left"
-                handleClick={handleCopy}
+                handleClick={() => {
+                  handleCopy(email);
+                }}
               />
             </div>
           )}

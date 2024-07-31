@@ -2,7 +2,7 @@ import React from "react";
 import { BentoGrid, BentoGridItem } from "./ui/BentoGrid";
 import { gridItems } from "@/data";
 
-const Grid = () => {
+const Grid = ({ workAt, email }: { workAt?: string; email: string }) => {
   return (
     <section id="about">
       <BentoGrid>
@@ -20,7 +20,8 @@ const Grid = () => {
             <BentoGridItem
               id={id}
               key={id}
-              title={title}
+              title={id === 5 ? workAt : title}
+              email={id === 6 ? email : undefined}
               description={description}
               className={className}
               img={img}
