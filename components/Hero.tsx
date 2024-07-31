@@ -5,7 +5,8 @@ import MagicButton from "./ui/MagicButton";
 import { FaLocationArrow } from "react-icons/fa6";
 import { GrDocumentUser } from "react-icons/gr";
 
-const Hero = () => {
+const Hero = ({ resumeUrl }: { resumeUrl?: string }) => {
+  console.log(resumeUrl);
   return (
     <div className="flex justify-center items-center h-screen">
       <div>
@@ -36,10 +37,7 @@ const Hero = () => {
           </p>
           <div className="flex md:flex-row flex-col justify-center items-center gap-5 md:gap-10">
             <div>
-              <a
-                target="_blank"
-                href="https://drive.google.com/file/d/1kwJf5I0ZestN7y7cZYtf0a7sI5rM2x2J/view?usp=sharing"
-              >
+              <a target="_blank" rel="noopener noreferrer" href={resumeUrl}>
                 <MagicButton
                   title="My resume"
                   icon={<GrDocumentUser />}
